@@ -21,8 +21,8 @@ def play():
 def shuffle(state):
     spotipy.shuffle(state)
 
-def search_song(message):
-    song = spotipy.search(message, 10, 0, 'track')
+def search_song(query):
+    song = spotipy.search(query, 10, 0, 'track')
     spotipy.add_to_queue(song.items[0])
 
 def how_to_search():
